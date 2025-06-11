@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Task</title>
+</head>
+<body>
+
+  <h2>Reverse a Number</h2>
+  <label>Enter a Number:</label>
+  <input type="number" id="numInput">
+  <button onclick="reverseNumber()">Reverse</button>
+  <p id="numResult"></p>
+
+  <h2>Alphabetical Order of a String</h2>
+  <label>Enter a String:</label>
+  <input type="text" id="strInput">
+  <button onclick="sortString()">Sort</button>
+  <p id="strResult"></p>
+
+  <script>
+    function reverseNumber() {
+      let num = document.getElementById("numInput").value;
+      let reversed = num.toString().split('').reverse().join('');
+      document.getElementById("numResult").innerText = "Reversed Number: " + reversed;
+    }
+
+    function sortString() {
+      let str = document.getElementById("strInput").value;
+      let sorted = str.split('').sort().join('');
+      document.getElementById("strResult").innerText = "Sorted String: " + sorted;
+    }
+  </script>
+
+</body>
+</html>
